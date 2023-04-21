@@ -31,7 +31,7 @@ def welcome():
 
 @app.route("/api/patients")
 def patients():
-    with open('resources/patients.csv') as f:
+    with open('resources/Patients.csv') as f:
         reader = csv.DictReader(f)
         data = [row for row in reader]
     return jsonify(data)
