@@ -33,16 +33,23 @@ def welcome():
 def patients():
     with open('resources/Patients.csv') as f:
         reader = csv.DictReader(f)
-        data = [row for row in reader]
+        data = []
+        for row in reader:
+            # Convert integer values to int
+            row['stay_length'] = int(row['stay_length'])
+            data.append(row)
     return jsonify(data)
 
-    return jsonify(patient_arr)
 
 @app.route("/api/statuscodes")
 def statuscodes():
     with open('resources/StatusCodes.csv') as f:
         reader = csv.DictReader(f)
-        data = [row for row in reader]
+        data = []
+        for row in reader:
+            # Convert integer values to int
+            row['status_count'] = int(row['status_count'])
+            data.append(row)
     return jsonify(data)
 
 
@@ -50,7 +57,11 @@ def statuscodes():
 def animals():
     with open('resources/Animals.csv') as f:
         reader = csv.DictReader(f)
-        data = [row for row in reader]
+        data = []
+        for row in reader:
+            # Convert integer values to int
+            row['species_count'] = int(row['species_count'])
+            data.append(row)
     return jsonify(data)
 
 @app.route("/api/locations")
