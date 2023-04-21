@@ -25,3 +25,5 @@ This is a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a
 # Wildlife Data Flask API
 
 Raw data is cleaned and structured with python and exported as four tables. These are used to create a basic Flask API that lets users access the jsonified data. This app is ised to power the front-end of a webpage that can be viewed [here](https://robotscott94.github.io/LMC-May-Wildlife-Rehab-Dashboard/). The repo for the front end can be found [here](https://github.com/robotscott94/LMC-May-Wildlife-Rehab-Dashboard).
+
+The [Railway](railway.app) app is used to host the api and make it accessible for other users.
